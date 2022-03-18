@@ -42,6 +42,29 @@
     <div id="vis"></div>
 
     <script type="text/javascript">
+      var yourVlSpec2 = {
+        $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+        description: "A simple bar chart with embedded data THAT'S BEEN EDITED.",
+        height: 500,
+        width: 500,
+        data: {
+          values: [
+            { a: "No delay", b: 1 },
+            { a: "1 week", b: 0.87 },
+            { a: "2 weeks", b: 0.81 },
+            { a: "3 weeks", b: 0.77 },
+          ],
+        },
+        mark: "point",
+        encoding: {
+          x: { field: "a", type: "ordinal" },
+          y: { field: "b", type: "quantitative" },
+        },
+      };
+      vegaEmbed("#vis", yourVlSpec);
+    </script>
+
+    <script type="text/javascript">
       var yourVlSpec = {
         $schema: "https://vega.github.io/schema/vega-lite/v5.json",
         description: "A simple bar chart with embedded data THAT'S BEEN EDITED.",
